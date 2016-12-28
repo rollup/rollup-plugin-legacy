@@ -1,0 +1,1 @@
+var answerToLifeTheUniverseAndEverything = 42;
