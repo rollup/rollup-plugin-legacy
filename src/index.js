@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+import MagicString from 'magic-string';
 
 const validName = /^[a-zA-Z_$][a-zA-Z$_0-9]*$/;
 
@@ -44,10 +45,13 @@ export default function legacy ( options ) {
 					code += `\n${statements.join( '\n' )}`;
 				}
 
-				return {
-					code,
-					map: { mappings: '' } // TODO need a way to say 'sourcemap hasn't changed
-				};
+				let map = { mappings: '' };
+				if (options.sourceMap !== false) {
+					const magicString = new MagicString(code);
+					map = magicString.generateMap({ hires: true });
+				}
+
+				return {code, map};
 			}
 		}
 	};
