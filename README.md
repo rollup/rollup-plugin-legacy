@@ -1,3 +1,7 @@
+# Moving...
+
+We're in the process of moving this plugin to a new [monorepo](https://github.com/rollup/plugins). Please stand by...
+
 # rollup-plugin-legacy
 
 Add `export` declarations to legacy non-module scripts.
