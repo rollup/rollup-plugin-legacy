@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/rollup/rollup-plugin-legacy#README",
   "devDependencies": {
-    "eslint": "^3.10.2",
+    "eslint": "^6.6.0",
     "mocha": "^3.1.2",
     "rollup": "^0.36.3",
     "rollup-plugin-buble": "^0.14.0"
